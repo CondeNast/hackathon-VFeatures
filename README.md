@@ -3,6 +3,10 @@
 # hackathon-VFeatures
 This a hackathon project for 2024. Details will be added soon.
 
+
+<img src="https://github.com/CondeNast/hackathon-VFeatures/assets/48400094/66d3c4b1-9825-4829-8012-51f04816c48d" alt="hackathon2024" width="400" height="500">
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

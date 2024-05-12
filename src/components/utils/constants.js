@@ -1,0 +1,1 @@
+export const contentTypes = ['Article', 'Gallery', 'Recipe', 'Review', 'InfoPage', 'Bundle'];

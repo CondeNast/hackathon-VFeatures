@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-import Header from "./Header";
 import { useDispatch } from "react-redux";
 import { hideHeader } from "./utils/appSlice";
 
@@ -57,11 +56,11 @@ const RecircSection = styled(Section)`
 `;
 
 const MainPage = ({ isCopilotPage }) => {
-  const { type } = useParams();
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(hideHeader());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

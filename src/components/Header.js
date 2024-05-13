@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
 import {
   BrandName,
   CreateButton,
   UploadButton,
   Dropdown,
   HeaderWrapper,
-  SearchInput,
 } from "./styles/Header.styles";
 import { contentTypes } from "./utils/constants";
 import { Link } from "react-router-dom";

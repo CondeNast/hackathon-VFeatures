@@ -3,9 +3,11 @@ import axios from 'axios';
 const PDFAssetPage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [summarizedText, setSummarizedText] = useState('');
+  
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
+  
   const handleSummarize = async () => {
     try {
       const formData = new FormData();

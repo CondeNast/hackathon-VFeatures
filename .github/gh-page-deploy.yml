@@ -1,6 +1,8 @@
 name: GH Page Deploy CI
 
 on:
+  push:
+    branches: [main]
   pull_request:
     branches: [main]
 

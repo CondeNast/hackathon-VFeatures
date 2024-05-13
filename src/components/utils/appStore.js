@@ -4,7 +4,7 @@ import appReducer from "./appSlice";
 
 const appStore = configureStore({
   reducer: {
-    cart: pdfReducer,
+    pdf: pdfReducer,
     app: appReducer
   },
 });

@@ -12,6 +12,7 @@ import {
 } from "./styles/Form.styles";
 import { Link } from "react-router-dom";
 import UploadPDFDialog from "./UploadPDFDialog";
+import { useSelector } from "react-redux";
 
 const Form = ({ contentType }) => {
   const [headline, setHeadline] = useState("This is headline");
@@ -42,6 +43,7 @@ const Form = ({ contentType }) => {
   );
   // const [pdfFile, setPdfFile] = useState(null);
   const [showDialog, setShowDialog] = useState(false);
+  const selectedPDF = useSelector((state) => state.pdf.pdfsDoc);
 
   const handlePdfUpload = () => {
     // Logic for handling PDF upload
@@ -57,6 +59,8 @@ const Form = ({ contentType }) => {
     // Logic to save and publish the article
     alert("Article Saved and Published!");
   };
+
+  const pdfSelected = selectedPDF ? selectedPDF : null;
 
   return (
     <Container>
@@ -95,6 +99,7 @@ const Form = ({ contentType }) => {
         <UploadAsset type="button" onClick={handlePdfUpload}>
             Upload an Asset
           </UploadAsset>
+          {pdfSelected && <span style={{color: 'blue', fontSize: '18px', marginLeft: '12px', fontWeight: 'bold'}}><Link to={`/edit/pdf/${pdfSelected.id}`} target="_blank">{`${pdfSelected.fileName} ✅`}</Link></span>}
         </FormGroup>
         <FormGroup>
           <Label htmlFor="publishUrl">Publish URL:</Label>

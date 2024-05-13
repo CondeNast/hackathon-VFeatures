@@ -3,14 +3,14 @@ import { createSlice, current } from "@reduxjs/toolkit";
 const pdfSlice = createSlice({
   name: "pdf",
   initialState: {
-    pdfsDoc: [],
+    pdfsDoc: null,
   },
   reducers: {
     addPDF: (state, action) => {
-      state.pdfsDoc.push(action.payload);
+      state.pdfsDoc = action.payload;
     },
     removePDF: (state, action) => {
-      state.pdfsDoc.pop();
+      state.pdfsDoc = null;
     }
   },
 });

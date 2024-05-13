@@ -1,10 +1,8 @@
 name: GH Page Deploy CI
 
 on:
-  push:
-    branches: [main]
   pull_request:
-    branches: [main]
+    types: [edited, labeled, unlabeled, opened, synchronize, reopened]
 
 jobs:
   build:

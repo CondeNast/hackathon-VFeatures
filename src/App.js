@@ -13,11 +13,11 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/create/:contentType",
-        element: <CreateContentType  />,
+        element: <CreateContentType  isCopilotPage={true}/>,
       },
       {
         path: "/allure/:type",
-        element: <MainPage />,
+        element: <MainPage  isCopilotPage={false} />,
       }
     ],
   },

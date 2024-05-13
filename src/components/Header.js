@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import {
   BrandName,
   CreateButton,
@@ -9,7 +10,8 @@ import {
 import { contentTypes } from "./utils/constants";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({isCopilotPage}) => {
+  const type = useParams();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -21,7 +23,7 @@ const Header = () => {
       <div>
         <BrandName>Allure</BrandName>
       </div>
-      <div>
+      {isCopilotPage && <div>
         <SearchInput type="text" placeholder="Search" />
         <CreateButton onClick={toggleDropdown}>Create</CreateButton>
         {isDropdownOpen && (
@@ -51,7 +53,7 @@ const Header = () => {
             </ul>
           </Dropdown>
         )}
-      </div>
+      </div>}
     </HeaderWrapper>
   );
 };

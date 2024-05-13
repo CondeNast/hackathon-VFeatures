@@ -1,10 +1,12 @@
 import { useParams } from "react-router-dom";
 import Form from "./Form";
+import Header from "./Header";
 
-const CreateContentType = () => {
+const CreateContentType = ({ isCopilotPage }) => {
   const { contentType } = useParams();
   return (
     <div>
+       <Header isCopilotPage={isCopilotPage}/>
       <Form contentType={contentType}/>
   </div>);
 };

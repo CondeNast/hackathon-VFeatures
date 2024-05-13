@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Form = ({ contentType }) => {
   const [headline, setHeadline] = useState("This is headline");
   const [dek, setDek] = useState("This is dek");
-  const [body, setBody] = useState("This is large body filed");
+  const [body, setBody] = useState("This is large body filed This is large body filed This is large body filed This is large body filed This is large body filed");
   const [publishUrl, setPublishUrl] = useState("https://www.jsndjsndk.com/story/articleSlug");
   const [pdfFile, setPdfFile] = useState(null);
 
@@ -75,7 +75,7 @@ const Form = ({ contentType }) => {
         </FormGroup>
         <FormGroup>
           <SubmitButton type="submit">Save and Publish</SubmitButton>
-          <Link to={`/allure/${contentType}`}>
+          <Link to={`/allure/${contentType}`} target="_blank">
           <ViewLive type="button">View Live</ViewLive>
           </Link>
         </FormGroup>

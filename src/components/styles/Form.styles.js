@@ -4,6 +4,7 @@ export const Container = styled.div`
   margin: 20px 50px 20px 50px;
   padding: 28px;
   padding-top: 20px;
+  font-family: sans-serif;
 `;
 
 export const Title = styled.h2`
@@ -17,17 +18,20 @@ export const FormGroup = styled.div`
 export const Label = styled.label`
   display: block;
   margin-bottom: 5px;
+  font-size: 18px;
 `;
 
 export const Input = styled.input`
-  width: 100%;
+  width: 70%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 16px;
 `;
 
 export const TextArea = styled.textarea`
-  width: 100%;
+  width: 70%;
+  height: 300px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;

@@ -2,7 +2,7 @@
   "name": "hackathon-vfeatures",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://utkarshsanjivan-conde.github.io/Condenast/hackathon-VFeatures",
+  "homepage": "https://condenast.github.io/Condenast/hackathon-VFeatures",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.4",
     "@testing-library/jest-dom": "^5.17.0",

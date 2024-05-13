@@ -45,6 +45,7 @@ export const SubmitButton = styled.button`
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 20px;
 
   &:hover {
     background-color: #0056b3;
@@ -62,5 +63,18 @@ export const ViewLive = styled.button`
   margin-left: 20px;
   &:hover {
     background-color: #0056b3;
+  }
+`;
+
+export const UploadAsset = styled.button`
+  background-color: #508ee6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
   }
 `;

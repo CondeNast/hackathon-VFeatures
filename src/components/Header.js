@@ -11,8 +11,7 @@ import {
 import { contentTypes } from "./utils/constants";
 import { Link } from "react-router-dom";
 
-const Header = ({isCopilotPage}) => {
-  const type = useParams();
+const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {

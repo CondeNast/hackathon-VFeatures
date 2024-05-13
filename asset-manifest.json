@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Condenast/hackathon-VFeatures/static/js/main.66c823d0.js",
-    "index.html": "/Condenast/hackathon-VFeatures/index.html",
-    "main.66c823d0.js.map": "/Condenast/hackathon-VFeatures/static/js/main.66c823d0.js.map"
+    "main.js": "/hackathon-VFeatures/static/js/main.0a33f9d7.js",
+    "index.html": "/hackathon-VFeatures/index.html",
+    "main.0a33f9d7.js.map": "/hackathon-VFeatures/static/js/main.0a33f9d7.js.map"
   },
   "entrypoints": [
-    "static/js/main.66c823d0.js"
+    "static/js/main.0a33f9d7.js"
   ]
 }

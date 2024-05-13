@@ -8,19 +8,19 @@ import PDFAssetPage from "./components/PDFAssetPage";
 
 const appRouter = createBrowserRouter([
   {
-    path: "/",
+    path: "/Condenast/hackathon-VFeatures/",
     element: <Homepage isCopilotPage={true}/>,
     children: [
       {
-        path: "/create/:contentType",
+        path: "/Condenast/hackathon-VFeatures/create/:contentType",
         element: <CreateContentType  isCopilotPage={true}/>,
       },
       {
-        path: "/allure/:type",
+        path: "/Condenast/hackathon-VFeatures/allure/:type",
         element: <MainPage  isCopilotPage={false} />,
       },
       {
-        path: "/edit/pdf/:id",
+        path: "/Condenast/hackathon-VFeatures/edit/pdf/:id",
         element: <PDFAssetPage />
       }
     ],

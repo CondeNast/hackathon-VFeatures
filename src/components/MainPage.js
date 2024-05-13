@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
+import { useDispatch } from "react-redux";
+import { hideHeader } from "./utils/appSlice";
 
 const MainContainer = styled.div`
   display: flex;
@@ -54,10 +56,15 @@ const RecircSection = styled(Section)`
 
 const MainPage = ({ isCopilotPage }) => {
   const { type } = useParams();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch((hideHeader()));
+  }, []);
 
   return (
     <MainContainer>
-      <Header isCopilotPage={isCopilotPage}/>
+      {/* <Header isCopilotPage={isCopilotPage}/> */}
       <AdSection>Ad Section</AdSection>
       <HeadlineSection>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

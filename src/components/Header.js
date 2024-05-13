@@ -24,7 +24,7 @@ const Header = ({isCopilotPage}) => {
       <div>
         <BrandName>Allure</BrandName>
       </div>
-      {isCopilotPage && <div>
+      {true && <div>
         {/* <SearchInput type="text" placeholder="Search" /> */}
         <Link to={`/edit/pdf`} target="_blank">
           <UploadButton onClick={toggleDropdown}>Upload PDF ⬆️ </UploadButton> 

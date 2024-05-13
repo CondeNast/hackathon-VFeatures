@@ -6,11 +6,10 @@ import appStore from "./components/utils/appStore";
 import MainPage from "./components/MainPage";
 import PDFAssetPage from "./components/PDFAssetPage";
 
-
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <Homepage />,
+    element: <Homepage isCopilotPage={true}/>,
     children: [
       {
         path: "/create/:contentType",

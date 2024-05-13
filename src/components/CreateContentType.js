@@ -6,7 +6,7 @@ const CreateContentType = ({ isCopilotPage }) => {
   const { contentType } = useParams();
   return (
     <div>
-       <Header isCopilotPage={isCopilotPage}/>
+       {/* <Header isCopilotPage={isCopilotPage}/> */}
       <Form contentType={contentType}/>
   </div>);
 };

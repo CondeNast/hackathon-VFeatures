@@ -14,25 +14,47 @@ export const BrandName = styled.h1`
   font-weight: bold;
 `;
 
-export const SearchInput = styled.input`
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
-  margin-right: 10px;
-`;
+// export const SearchInput = styled.input`
+//   padding: 5px;
+//   border: none;
+//   border-radius: 5px;
+//   margin-right: 10px;
+// `;
 
 export const CreateButton = styled.button`
-  padding: 8px 12px;
+  padding: 12px;
   background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
+export const UploadButton = styled.button`
+  padding: 8px 12px;
+  background-color: #e65050;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 18px;
+  font-size: 18px;
+  font-weight: bold;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export const Dropdown = styled.div`
   position: absolute;
-  top: 40px;
+  top: 90px;
+  right: 10px;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);

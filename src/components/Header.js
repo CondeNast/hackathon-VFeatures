@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import {
   BrandName,
   CreateButton,
+  UploadButton,
   Dropdown,
   HeaderWrapper,
   SearchInput,
@@ -24,7 +25,10 @@ const Header = ({isCopilotPage}) => {
         <BrandName>Allure</BrandName>
       </div>
       {isCopilotPage && <div>
-        <SearchInput type="text" placeholder="Search" />
+        {/* <SearchInput type="text" placeholder="Search" /> */}
+        <Link to={`/edit/pdf`} target="_blank">
+          <UploadButton onClick={toggleDropdown}>Upload PDF ⬆️ </UploadButton> 
+        </Link>
         <CreateButton onClick={toggleDropdown}>Create</CreateButton>
         {isDropdownOpen && (
           <Dropdown>

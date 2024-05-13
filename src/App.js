@@ -4,6 +4,7 @@ import CreateContentType from "./components/CreateContentType";
 import { Provider } from "react-redux";
 import appStore from "./components/utils/appStore";
 import MainPage from "./components/MainPage";
+import PDFAssetPage from "./components/PDFAssetPage";
 
 
 const appRouter = createBrowserRouter([
@@ -18,6 +19,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/allure/:type",
         element: <MainPage  isCopilotPage={false} />,
+      },
+      {
+        path: "/edit/pdf",
+        element: <PDFAssetPage />
       }
     ],
   },

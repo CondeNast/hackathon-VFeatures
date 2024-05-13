@@ -1,4 +1,4 @@
-name: GH Page Deploy CI
+name: GH Page Deploy
 
 on: push
   branches

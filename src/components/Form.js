@@ -11,49 +11,34 @@ import {
   Title,
 } from "./styles/Form.styles";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
-
-const DialogContainer = styled.div`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%; /* Adjust the width of the dialog box */
-  max-width: 500px; /* Set maximum width if needed */
-  background-color: #ebeff5;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  z-index: 999;
-`;
-
-const CloseButton = styled.button`
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-`;
-
-const UploadPDFDialog = ({ onClose }) => {
-  return (
-    <DialogContainer>
-      <CloseButton onClick={onClose}>✖️</CloseButton>
-      <h2>Upload PDF</h2>
-      {/* Add form elements for uploading PDF */}
-    </DialogContainer>
-  );
-};
+import UploadPDFDialog from "./UploadPDFDialog";
 
 const Form = ({ contentType }) => {
   const [headline, setHeadline] = useState("This is headline");
   const [dek, setDek] = useState("This is dek");
-  const [body, setBody] = useState(
-    "This is large body filed This is large body filed This is large body filed This is large body filed This is large body filed"
-  );
+  const [body, setBody] = useState(`
+          Ligula ullamcorper malesuada proin libero. Sed velit dignissim sodales
+          ut eu sem. Viverra adipiscing at in tellus. Quisque non tellus orci ac
+          auctor. Eget mi proin sed libero enim sed faucibus. Cras pulvinar
+          mattis nunc sed. Facilisis mauris sit amet massa vitae tortor
+          condimentum lacinia. Aliquet nibh praesent tristique magna sit amet.
+          Curabitur vitae nunc sed velit dignissim sodales ut. Mauris ultrices
+          eros in cursus turpis massa tincidunt. Mattis pellentesque id nibh
+          tortor id aliquet lectus. Nunc mi ipsum faucibus vitae aliquet nec
+          ullamcorper. Risus nec feugiat in fermentum posuere urna. Senectus et
+          netus et malesuada. Sed nisi lacus sed viverra tellus. Suscipit tellus
+          mauris a diam maecenas sed enim ut. Id neque aliquam vestibulum morbi
+          blandit cursus risus at. Metus vulputate eu scelerisque felis. Elit ut
+          aliquam purus sit amet luctus venenatis lectus. Bibendum ut tristique
+          et egestas quis. Vitae justo eget magna fermentum. Euismod quis
+          viverra nibh cras pulvinar mattis nunc sed. Diam donec adipiscing
+          tristique risus nec feugiat in fermentum. Turpis egestas sed tempus
+          urna. Dictum fusce ut placerat orci nulla. Tincidunt dui ut ornare
+          lectus sit amet est placerat. Porttitor leo a diam sollicitudin tempor
+          id eu nisl. Nec dui nunc mattis enim ut tellus elementum sagittis
+          vitae.`);
   const [publishUrl, setPublishUrl] = useState(
-    "https://www.jsndjsndk.com/story/articleSlug"
+    "http://localhost:8000/allure/article"
   );
   // const [pdfFile, setPdfFile] = useState(null);
   const [showDialog, setShowDialog] = useState(false);
@@ -107,6 +92,11 @@ const Form = ({ contentType }) => {
           ></TextArea>
         </FormGroup>
         <FormGroup>
+        <UploadAsset type="button" onClick={handlePdfUpload}>
+            Upload an Asset
+          </UploadAsset>
+        </FormGroup>
+        <FormGroup>
           <Label htmlFor="publishUrl">Publish URL:</Label>
           <Input
             type="url"
@@ -117,22 +107,9 @@ const Form = ({ contentType }) => {
           />
         </FormGroup>
         <FormGroup>
-          {/* <Label htmlFor="pdfFile">Upload PDF:</Label>
-          <Input
-          type="file"
-          id="pdfFile"
-          accept=".pdf"
-          onChange={handlePdfUpload}
-          required
-        /> */}
-        </FormGroup>
-        <FormGroup>
-          <UploadAsset type="button" onClick={handlePdfUpload}>
-            Upload an Asset
-          </UploadAsset>
           <SubmitButton type="submit">Save and Publish</SubmitButton>
           <Link to={`/allure/${contentType}`} target="_blank">
-            <ViewLive type="button">View Live</ViewLive>
+            <ViewLive type="button">Preview</ViewLive>
           </Link>
         </FormGroup>
         {showDialog && <UploadPDFDialog onClose={handleCloseDialog} />}

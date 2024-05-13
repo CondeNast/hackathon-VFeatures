@@ -20,7 +20,7 @@ const appRouter = createBrowserRouter([
         element: <MainPage  isCopilotPage={false} />,
       },
       {
-        path: "/edit/pdf",
+        path: "/edit/pdf/:id",
         element: <PDFAssetPage />
       }
     ],

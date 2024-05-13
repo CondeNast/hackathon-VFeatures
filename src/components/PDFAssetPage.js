@@ -1,6 +1,9 @@
+import { useParams } from "react-router-dom";
+
 const PDFAssetPage = () => {
-    return <div>
-        This is a PDF asset page where you can edit PDF details and also generate its summary using A.I.
+    const { id }  = useParams();
+    return <div style={{fontSize: '24px' }}>
+        This is PDF {id} asset edit page
     </div>
 }
 

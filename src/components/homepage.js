@@ -1,13 +1,15 @@
-import CreateContentType from './CreateContentType';
-import Header from './Header';
+import CreateContentType from "./CreateContentType";
+import Header from "./Header";
 
 const Homepage = () => {
   return (
-    <>
-  <Header />
-  <CreateContentType />
-  </>
-    )
+    <div>
+      <Header />
+      <div style={{ backgroundColor: "#edebeb", margin: '350px', marginTop: '50px' }}>
+        <CreateContentType />
+      </div>
+    </div>
+  );
 };
 
 export default Homepage;

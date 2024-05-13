@@ -38,4 +38,4 @@ jobs:
           user_name: "utkarsh-sanjivan"
           user_email: "utkarsh_sanjivan@condenast.com"
           github_token: ${{ secrets.TOKEN_FOR_REPO_DEPLOY }}
-          repository: "hackathon-VFeatures"
+          repository: "Condenast/hackathon-VFeatures"

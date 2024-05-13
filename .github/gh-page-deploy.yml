@@ -1,8 +1,6 @@
 name: GH Page Deploy CI
 
-on:
-  pull_request:
-    types: [edited, labeled, unlabeled, opened, synchronize, reopened]
+on: pull_request
 
 jobs:
   build:

@@ -3,6 +3,7 @@ import Homepage from "./components/homepage";
 import CreateContentType from "./components/CreateContentType";
 import { Provider } from "react-redux";
 import appStore from "./components/utils/appStore";
+import MainPage from "./components/MainPage";
 
 
 const appRouter = createBrowserRouter([
@@ -14,6 +15,10 @@ const appRouter = createBrowserRouter([
         path: "/create/:contentType",
         element: <CreateContentType  />,
       },
+      {
+        path: "/allure/:type",
+        element: <MainPage />,
+      }
     ],
   },
 ]);

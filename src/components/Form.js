@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, FormGroup, Input, Label, SubmitButton, ViewLive, TextArea, Title } from "./styles/Form.styles";
+import { Link } from "react-router-dom";
 
 const Form = ({ contentType }) => {
   const [headline, setHeadline] = useState("This is headline");
@@ -19,14 +20,9 @@ const Form = ({ contentType }) => {
     alert("Article Saved and Published!");
   };
 
-  const handleViewLive = () => {
-    // Replace 'your-url-here' with the URL you want to open
-    window.open('http://localhost:3000/allure/story/article-slug', '_blank');
-  };
-
   return (
     <Container>
-      <Title>{contentType.toUpperCase()}</Title>
+      <Title>{contentType && contentType.toUpperCase()}</Title>
       <form onSubmit={handleSubmit}>
         <FormGroup>
           <Label htmlFor="headline">Headline:</Label>
@@ -79,7 +75,9 @@ const Form = ({ contentType }) => {
         </FormGroup>
         <FormGroup>
           <SubmitButton type="submit">Save and Publish</SubmitButton>
-          <ViewLive type="button" onClick={handleViewLive}> View Live</ViewLive>
+          <Link to={`/allure/${contentType}`}>
+          <ViewLive type="button">View Live</ViewLive>
+          </Link>
         </FormGroup>
       </form>
     </Container>

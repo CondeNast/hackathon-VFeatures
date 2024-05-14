@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/hackathon-VFeatures/static/js/main.9afeb9c3.js",
-    "index.html": "/hackathon-VFeatures/index.html",
-    "main.9afeb9c3.js.map": "/hackathon-VFeatures/static/js/main.9afeb9c3.js.map"
+    "main.js": "/static/js/main.e3a2bbbc.js",
+    "index.html": "/index.html",
+    "main.e3a2bbbc.js.map": "/static/js/main.e3a2bbbc.js.map"
   },
   "entrypoints": [
-    "static/js/main.9afeb9c3.js"
+    "static/js/main.e3a2bbbc.js"
   ]
 }

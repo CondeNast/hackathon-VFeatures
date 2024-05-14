@@ -10,8 +10,9 @@ const DialogContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-width: 70%;
-  background-color: #fff;
+  width: 70%;
+  background-color: #171717;
+  color: white;
   padding: 24px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -47,10 +48,17 @@ const SubGroupItem = styled.li`
   border: 1px solid #d4d6d9;
   margin-bottom: 5px;
   border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d4d6d9;
+    color: black;
+    font-size: 18px;
+  }
 `;
 
 const Tile = styled.div`
-    width: auto;
+  width: auto;
   height: 40px;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
@@ -64,6 +72,7 @@ const Tile = styled.div`
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: black;
 
   &:hover {
     transform: scale(1.05);
@@ -72,12 +81,15 @@ const Tile = styled.div`
 `;
 
 const SearchField = styled.input`
-  width: 100%;
+  width: 95%;
   padding: 10px;
   margin-bottom: 20px;
   font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 5px;
+  background-color: #d4d6d9;
 `;
 
 const SubmitButton = styled.button`
@@ -91,7 +103,7 @@ const SubmitButton = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-   opacity: 0.8;
+    opacity: 0.8;
   }
 `;
 
@@ -115,9 +127,7 @@ const UploadPDFDialog = ({ onClose }) => {
         <SubGroup>
           <SubGroupTitle>Copilot (All)</SubGroupTitle>
           <SubGroupList>
-            <SubGroupItem style={{ backgroundColor: "#d4d6d9" }}>
-              PDF
-            </SubGroupItem>
+            <SubGroupItem>PDF</SubGroupItem>
             <SubGroupItem>External Link</SubGroupItem>
             <SubGroupItem>Clip</SubGroupItem>
             <SubGroupItem>Photo</SubGroupItem>
@@ -128,20 +138,24 @@ const UploadPDFDialog = ({ onClose }) => {
       </LeftSection>
       <MainSection>
         <SearchField type="text" placeholder="Search PDFs" />
-        <p style={{ margin: "5px" }}>
+        <p style={{ marginLeft: "10px", marginTop: "5px" }}>
           Click on the PDF to select for uploading*
         </p>
-        <div style={{ display: "flex", flexDirection: 'column' }}>
-  {pdfData.map((pdf) => (
-    <Tile onClick={() => handlePDFSelect(pdf)} key={pdf.id} >
-      <Link to={`/Condenast/hackathon-VFeatures/edit/pdf/${pdf.id}`} target="_blank" style={{ textDecoration: 'none' }}>
-        <PdfTitle>📄 {pdf.Title} </PdfTitle>
-      </Link>
-      <p>Published Date: {pdf.PublicationDate}</p>
-    </Tile>
-  ))}
-</div>
-        <div style={{ justifyContent: 'right' }}> {/* Aligns the child to the right end */}
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          {pdfData.map((pdf) => (
+            <Tile onClick={() => handlePDFSelect(pdf)} key={pdf.id}>
+              <Link
+                to={`/Condenast/hackathon-VFeatures/edit/pdf/${pdf.id}`}
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
+                <PdfTitle>📄 {pdf.Title} </PdfTitle>
+              </Link>
+              <p>Published Date: {pdf.PublicationDate}</p>
+            </Tile>
+          ))}
+        </div>
+        <div style={{ justifyContent: "right" }}>
           <SubmitButton onClick={onClose}> ❌ Cancel & Close</SubmitButton>
         </div>
       </MainSection>

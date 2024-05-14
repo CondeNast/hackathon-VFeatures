@@ -92,15 +92,15 @@ const MainPage = ({ isCopilotPage }) => {
 
   const handleDownload = () => {
     const anchor = document.createElement("a");
-    anchor.href = 'https://hsc.unm.edu/_media/pdfs/rbhomeworkoutguide2020-3.pdf'
+    anchor.href =
+      "https://hsc.unm.edu/_media/pdfs/rbhomeworkoutguide2020-3.pdf";
     anchor.download = "Beginner_Pilates_Workout_Plan.pdf";
-    anchor.target = '_blank';
+    anchor.target = "_blank";
     anchor.click();
   };
 
   return (
     <MainContainer>
-      {/* <Header isCopilotPage={isCopilotPage}/> */}
       <AdSection>Ad Section</AdSection>
       <HeadlineSection>
         A Beginner Pilates Workout You Can Do Right in Your Living Room
@@ -135,35 +135,48 @@ const MainPage = ({ isCopilotPage }) => {
               accessible to a wide range of fitness levels—including, yup,
               beginners.
             </p>
-            <div style={{display: "flex"}}>
-            <Sidebar>
-              <SidebarImage
-                src="https://stag-media.self.com/photos/65d7c1d740607b9f89b6936f/master/w_1600,c_limit/amanda-side-plank.jpg"
-                alt="Sidebar Image"
-              />
-              <div style={{display: 'flex', width: "100%"}}>
-              <SidebarDownloadButton onClick={handleDownload}> <img src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/download-pdf-icon.png" alt="download-pdf" /></SidebarDownloadButton>
-              <SidebarText>Download the Beginner Pilates Workout Plan </SidebarText>
-              </div>
-              <p style={{fontSize: "16px", fontFamily: 'serif'}}>The "Beginner Pilates Workout Plan" is a comprehensive guide designed for individuals new to Pilates exercises. It covers various aspects of Pilates, including the importance of proper form, core stability, and mind-body connection.</p>
-            </Sidebar>
-            <p style={{flex: "50%"}}>
-              Take the classic single-leg stretch exercise, for example. This
-              core-centric move can be modified by placing your head on the
-              ground or bringing one leg back into your chest before extending
-              the other. Or it can be made more challenging by curling your
-              head, neck, and shoulders up and doing reps from that position so
-              that your abs take on more work, or by simultaneously extending
-              one leg as the other starts to come back toward your chest,
-              Rothenberg says.  Take the classic single-leg stretch exercise, for example. This
-              core-centric move can be modified by placing your head on the
-              ground or bringing one leg back into your chest before extending
-              the other. Or it can be made more challenging by curling your
-              head, neck, and shoulders up and doing reps from that position so
-              that your abs take on more work, or by simultaneously extending
-              one leg as the other starts to come back toward your chest,
-              Rothenberg says. 
-            </p>
+            <div style={{ display: "flex" }}>
+              <Sidebar>
+                <SidebarImage
+                  src="https://stag-media.self.com/photos/65d7c1d740607b9f89b6936f/master/w_1600,c_limit/amanda-side-plank.jpg"
+                  alt="Sidebar Image"
+                />
+                <div style={{ display: "flex", width: "100%" }}>
+                  <SidebarDownloadButton onClick={handleDownload}>
+                    {" "}
+                    <img
+                      src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/download-pdf-icon.png"
+                      alt="download-pdf"
+                    />
+                  </SidebarDownloadButton>
+                  <SidebarText>
+                    Download the Beginner Pilates Workout Plan{" "}
+                  </SidebarText>
+                </div>
+                <p style={{ fontSize: "16px", fontFamily: "serif" }}>
+                  The "Beginner Pilates Workout Plan" is a comprehensive guide
+                  designed for individuals new to Pilates exercises. It covers
+                  various aspects of Pilates, including the importance of proper
+                  form, core stability, and mind-body connection.
+                </p>
+              </Sidebar>
+              <p style={{ flex: "50%" }}>
+                Take the classic single-leg stretch exercise, for example. This
+                core-centric move can be modified by placing your head on the
+                ground or bringing one leg back into your chest before extending
+                the other. Or it can be made more challenging by curling your
+                head, neck, and shoulders up and doing reps from that position
+                so that your abs take on more work, or by simultaneously
+                extending one leg as the other starts to come back toward your
+                chest, Rothenberg says. Take the classic single-leg stretch
+                exercise, for example. This core-centric move can be modified by
+                placing your head on the ground or bringing one leg back into
+                your chest before extending the other. Or it can be made more
+                challenging by curling your head, neck, and shoulders up and
+                doing reps from that position so that your abs take on more
+                work, or by simultaneously extending one leg as the other starts
+                to come back toward your chest, Rothenberg says.
+              </p>
             </div>
             <p>
               “The first layer will be really mindful, where you make sure

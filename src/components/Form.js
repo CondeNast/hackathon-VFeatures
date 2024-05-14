@@ -96,10 +96,24 @@ const Form = ({ contentType }) => {
           ></TextArea>
         </FormGroup>
         <FormGroup>
-        <UploadAsset type="button" onClick={handlePdfUpload}>
+          <UploadAsset type="button" onClick={handlePdfUpload}>
             Upload an Asset
           </UploadAsset>
-          {pdfSelected && <span style={{color: 'blue', fontSize: '18px', marginLeft: '12px', fontWeight: 'bold'}}><Link to={`/Condenast/hackathon-VFeatures/edit/pdf/${pdfSelected.id}`} target="_blank">{`${pdfSelected.fileName} ✅`}</Link></span>}
+          {pdfSelected && (
+            <span
+              style={{
+                color: "blue",
+                fontSize: "18px",
+                marginLeft: "12px",
+                fontWeight: "bold",
+              }}
+            >
+              <Link
+                to={`/Condenast/hackathon-VFeatures/edit/pdf/${pdfSelected.id}`}
+                target="_blank"
+              >{`${pdfSelected.fileName} ✅`}</Link>
+            </span>
+          )}
         </FormGroup>
         <FormGroup>
           <Label htmlFor="publishUrl">Publish URL:</Label>
@@ -113,7 +127,10 @@ const Form = ({ contentType }) => {
         </FormGroup>
         <FormGroup>
           <SubmitButton type="submit">Save and Publish</SubmitButton>
-          <Link to={`/Condenast/hackathon-VFeatures/allure/preview/${contentType}`} target="_blank">
+          <Link
+            to={`/Condenast/hackathon-VFeatures/allure/preview/${contentType}`}
+            target="_blank"
+          >
             <ViewLive type="button">Preview</ViewLive>
           </Link>
         </FormGroup>

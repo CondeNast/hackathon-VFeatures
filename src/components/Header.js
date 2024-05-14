@@ -24,7 +24,7 @@ const Header = () => {
       {true && (
         <div>
           <Link to={`/edit/pdf`}>
-            <UploadButton onClick={toggleDropdown}>Upload PDF ⬆️ </UploadButton>
+            <UploadButton>Upload PDF ⬆️ </UploadButton>
           </Link>
           <CreateButton onClick={toggleDropdown}>Create</CreateButton>
           {isDropdownOpen && (

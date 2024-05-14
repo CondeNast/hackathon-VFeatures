@@ -59,6 +59,11 @@ const PDFAssetPage = () => {
 
   const handleFileChange = (event) => {
     // setSelectedFile(event.target.files[0]);
+    const file = event.target.files[0];
+    if (file) {
+        const fileName = file.name;
+        setFileName(fileName);
+      }
   };
 
   const handleSave = (e) => {
@@ -80,6 +85,9 @@ const PDFAssetPage = () => {
 
   const handleSummarize = async (e) => {
     e.preventDefault();
+    if(!fileName) {
+       return
+    };
     try {
       setLoading(true);
       setTimeout(() => {
@@ -112,7 +120,7 @@ const PDFAssetPage = () => {
       <form onSubmit={handleSubmit}>
         <FormGroup style={{ display: "flex", flexDirection: "column" }}>
           <Label htmlFor="dek">Upload PDF:</Label>
-          <Input type="file" key={fileKey} onChange={handleFileChange} />
+          <Input type="file" key={fileKey} onChange={handleFileChange} required/>
           <CreateSummaryButton
             style={{ marginTop: "12px", width: "200px" }}
             onClick={handleSummarize}

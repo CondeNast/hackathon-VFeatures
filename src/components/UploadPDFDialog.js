@@ -146,12 +146,11 @@ const UploadPDFDialog = ({ onClose }) => {
             <Tile onClick={() => handlePDFSelect(pdf)} key={pdf.id}>
               <Link
                 to={`/Condenast/hackathon-VFeatures/edit/pdf/${pdf.id}`}
-                target="_blank"
                 style={{ textDecoration: "none" }}
               >
                 <PdfTitle>📄 {pdf.Title} </PdfTitle>
               </Link>
-              <p>Published Date: {pdf.PublicationDate}</p>
+              <p style={{color: 'grey', fontSize: '12px'}}>Size: {pdf.Size} | Published Date: {pdf.PublicationDate}</p>
             </Tile>
           ))}
         </div>

@@ -6,6 +6,7 @@ import {
   Input,
   Label,
   SubmitButton,
+  TextArea,
   Title,
 } from "./styles/Form.styles";
 
@@ -20,6 +21,10 @@ const PDFAssetPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("PDF asset created successfully!");
+  };
+
+  const handleSummaryChange = (e) => {
+    setSummarizedText(e.target.value);
   };
 
   const handleSummarize = async () => {
@@ -82,12 +87,10 @@ const PDFAssetPage = () => {
           >
             Summarize using AI ✨
           </SubmitButton>
-          {summarizedText && (
-            <div>
-              <h2>Summarized Text:</h2>
-              <p>{summarizedText}</p>
-            </div>
-          )}
+              <FormGroup>
+                <Label style={{marginTop: "15px"}} htmlFor="dek">Summarized Text:</Label>
+                <TextArea id="summary" placeholder="Summary here...." style={{width: "800px", height: "200px", fontSize: '18px', fontFamily: "sans-serif"}}  onChange={handleSummaryChange} value={summarizedText} />
+              </FormGroup>
         </FormGroup>
         <FormGroup>
           <Label htmlFor="dek">File name:</Label>

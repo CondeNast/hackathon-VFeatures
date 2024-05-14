@@ -23,8 +23,9 @@ const Header = () => {
       </div>
       {true && (
         <div>
-          <Link to={`/Condenast/hackathon-VFeatures/edit/pdf`} target="_blank">
-            <UploadButton onClick={toggleDropdown}>Upload PDF ⬆️ </UploadButton>
+          <Link to={`/Condenast/hackathon-VFeatures/edit/pdf`} 
+          >
+            <UploadButton>Upload PDF ⬆️ </UploadButton>
           </Link>
           <CreateButton onClick={toggleDropdown}>Create</CreateButton>
           {isDropdownOpen && (

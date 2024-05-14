@@ -102,10 +102,10 @@ const MainPage = ({ isCopilotPage }) => {
   return (
     <MainContainer>
       <AdSection>Ad Section</AdSection>
-      <HeadlineSection>
+      <HeadlineSection style={{fontFamily:"arial"}}>
         A Beginner Pilates Workout You Can Do Right in Your Living Room
       </HeadlineSection>
-      <ContentSection>
+      <ContentSection style={{fontFamily:"serif"}}>
         <article>
           <section>
             <h1>

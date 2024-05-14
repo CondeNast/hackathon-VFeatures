@@ -134,7 +134,7 @@ const UploadPDFDialog = ({ onClose }) => {
         <div style={{ display: "flex", flexDirection: 'column' }}>
   {pdfData.map((pdf) => (
     <Tile onClick={() => handlePDFSelect(pdf)} key={pdf.id} >
-      <Link to={`/Condenast/hackathon-VFeatures/edit/pdf/${pdf.id}`} target="_blank" style={{ textDecoration: 'none' }}>
+      <Link to={`/edit/pdf/${pdf.id}`} target="_blank" style={{ textDecoration: 'none' }}>
         <PdfTitle>📄 {pdf.Title} </PdfTitle>
       </Link>
       <p>Published Date: {pdf.PublicationDate}</p>

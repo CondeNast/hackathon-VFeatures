@@ -151,7 +151,8 @@ const MainPage = () => {
                   </SidebarText>
                 </div>
                 <p style={{ fontSize: "16px", fontFamily: "serif" }}>
-                Being active makes you feel better, gives you more energy, improves your mood, and helps you lose weight. Choose activities that are fun, safe, involve repetitive motion that uses the arms and legs, and build endurance.
+                  The "Beginner Pilates Workout Plan" is a comprehensive guide
+                  designed for individuals new to Pilates exercises.
                 </p>
               </Sidebar>
               <p style={{ flex: "50%" }}>
@@ -172,10 +173,9 @@ const MainPage = () => {
                 to come back toward your chest, Rothenberg says. “The first
                 layer will be really mindful, where you make sure you’re doing
                 the right form, your hips aren’t rocking side to side, your
-                range of motion feels right for you,” she explains. Because this routine is designed as a gentle beginner sequence,
-              you don’t need to do a dedicated warm-up beforehand. Because this routine is designed as a gentle beginner sequence,
-              you don’t need to do a dedicated warm-up beforehand. Because this routine is designed as a gentle beginner sequence,
-              you don’t need to do a dedicated warm-up beforehand. 
+                range of motion feels right for you,” she explains. Because this
+                routine is designed as a gentle beginner sequence, you don’t
+                need to do a dedicated warm-up beforehand.
               </p>
             </div>
             <p>

@@ -8,9 +8,9 @@ import PDFAssetPage from "./components/PDFAssetPage";
 
 const pages = [
   {
-    pageLink: '/',
+    pageLink: '/create/:contentType',
     view: <CreateContentType isCopilotPage={true}/>,
-    displayName: 'Homepage'
+    displayName: 'Create Content'
   },
   {
     pageLink: '/create/:contentType/',
@@ -18,7 +18,7 @@ const pages = [
     displayName: 'Create Content Page'
   },
   {
-    pageLink: '/allure/:type/',
+    pageLink: '/allure/preview/:type/',
     view: <MainPage isCopilotPage={false} />,
     displayName: 'Main Page'
   },
@@ -26,10 +26,15 @@ const pages = [
     pageLink: '/edit/pdf/',
     view: <PDFAssetPage />,
     displayName: 'PDF Asset Page'
+  },
+  {
+    pageLink: "/edit/pdf/:id",
+    view: <PDFAssetPage />,
+    displayName: 'PDF Asset Page'
   }
 ];
 
-function App() { 
+function App() {
   return (
     <Provider store={appStore}>
       <Homepage isCopilotPage={true}/>
@@ -50,4 +55,3 @@ function App() {
 }
 
 export default App;
-

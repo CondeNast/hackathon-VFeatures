@@ -3,12 +3,12 @@ import Header from "./Header";
 import { useSelector } from "react-redux";
 
 const Homepage = () => {
-const shouldHideHeader = useSelector((store) => store.app.isHeaderVisible);
+  const shouldHideHeader = useSelector((store) => store.app.isHeaderVisible);
   return (
-      <div>
+    <div>
       {shouldHideHeader && <Header />}
-        <Outlet />
-      </div>
+      <Outlet />
+    </div>
   );
 };
 

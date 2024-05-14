@@ -21,40 +21,41 @@ const Header = () => {
       <div>
         <BrandName>Allure</BrandName>
       </div>
-      {true && <div>
-        {/* <SearchInput type="text" placeholder="Search" /> */}
-        <Link to={`/edit/pdf`} target="_blank">
-          <UploadButton onClick={toggleDropdown}>Upload PDF ⬆️ </UploadButton> 
-        </Link>
-        <CreateButton onClick={toggleDropdown}>Create</CreateButton>
-        {isDropdownOpen && (
-          <Dropdown>
-            <ul>
-              {contentTypes.map((contentType) => (
-                <li key={contentType} style={{ margin: '5px 0' }}>
-                <Link
-                  to={`/create/${contentType.toLowerCase()}`}
-                  style={{
-                    textDecoration: 'none',
-                    color: 'black',
-                    fontSize: '18px',
-                    padding: '5px 10px',
-                    borderRadius: '5px',
-                    display: 'block',
-                    transition: 'background 0.3s ease',
-                    width: '100%',
-                    height: '100%'
-                  }}
-                  onClick={() => setIsDropdownOpen(false)}
-                >
-                  {contentType}
-                </Link>
-              </li>
-              ))}
-            </ul>
-          </Dropdown>
-        )}
-      </div>}
+      {true && (
+        <div>
+          <Link to={`/edit/pdf`} target="_blank">
+            <UploadButton onClick={toggleDropdown}>Upload PDF ⬆️ </UploadButton>
+          </Link>
+          <CreateButton onClick={toggleDropdown}>Create</CreateButton>
+          {isDropdownOpen && (
+            <Dropdown>
+              <ul>
+                {contentTypes.map((contentType) => (
+                  <li key={contentType} style={{ margin: "5px 0" }}>
+                    <Link
+                      to={`/create/${contentType.toLowerCase()}`}
+                      style={{
+                        textDecoration: "none",
+                        color: "black",
+                        fontSize: "18px",
+                        padding: "5px 10px",
+                        borderRadius: "5px",
+                        display: "block",
+                        transition: "background 0.3s ease",
+                        width: "100%",
+                        height: "100%",
+                      }}
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      {contentType}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </Dropdown>
+          )}
+        </div>
+      )}
     </HeaderWrapper>
   );
 };

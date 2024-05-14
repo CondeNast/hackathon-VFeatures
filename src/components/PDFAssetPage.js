@@ -49,10 +49,6 @@ const LoadingSpinner = () => {
 const PDFAssetPage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [summarizedText, setSummarizedText] = useState("");
-  const [title, setTitle] = useState("");
-  const [dek, setDek] = useState("");
-  const [author, setAuthor] = useState("");
-  const [tags, setTags] = useState("");
   const [fileName, setFileName] = useState("");
   const [fileKey, setFileKey] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -113,42 +109,6 @@ const PDFAssetPage = () => {
     <Container>
       <Title>PDF Asset</Title>
       <form onSubmit={handleSubmit}>
-        {/* <FormGroup>
-          <Label htmlFor="title">Title:</Label>
-          <Input
-            type="text"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label htmlFor="dek">Description:</Label>
-          <Input
-            type="text"
-            id="dek"
-            value={dek}
-            onChange={(e) => setDek(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label htmlFor="dek">Author:</Label>
-          <Input
-            type="text"
-            id="author"
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label htmlFor="dek">Tags:</Label>
-          <Input
-            type="text"
-            id="tags"
-            value={tags}
-            onChange={(e) => setTags(e.target.value)}
-          />
-        </FormGroup> */}
         <FormGroup style={{ display: "flex", flexDirection: "column" }}>
           <Label htmlFor="dek">Upload PDF:</Label>
           <Input type="file" key={fileKey} onChange={handleFileChange} />

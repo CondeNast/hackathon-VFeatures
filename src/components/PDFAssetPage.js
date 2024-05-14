@@ -100,7 +100,8 @@ const PDFAssetPage = () => {
           },
         }
       );
-      setSummarizedText(response.data);
+      const formattedText = response.data.replace(/\. /g, ".\n\n").replace(/\s+/g, " ");
+      setSummarizedText(formattedText);
     } catch (error) {
       console.error("Error summarizing text:", error);
     } finally {
@@ -112,7 +113,7 @@ const PDFAssetPage = () => {
     <Container>
       <Title>PDF Asset</Title>
       <form onSubmit={handleSubmit}>
-        <FormGroup>
+        {/* <FormGroup>
           <Label htmlFor="title">Title:</Label>
           <Input
             type="text"
@@ -147,7 +148,7 @@ const PDFAssetPage = () => {
             value={tags}
             onChange={(e) => setTags(e.target.value)}
           />
-        </FormGroup>
+        </FormGroup> */}
         <FormGroup style={{ display: "flex", flexDirection: "column" }}>
           <Label htmlFor="dek">Upload PDF:</Label>
           <Input type="file" key={fileKey} onChange={handleFileChange} />
@@ -166,12 +167,13 @@ const PDFAssetPage = () => {
             ) : (
               <TextArea
                 id="summary"
-                placeholder="Summary here...."
+                placeholder="PDF Summary here..."
                 style={{
                   width: "800px",
                   height: "200px",
                   fontSize: "18px",
-                  fontFamily: "sans-serif",
+                  fontFamily: "serif",
+                  padding: "12px"
                 }}
                 onChange={handleSummaryChange}
                 value={summarizedText}
@@ -190,7 +192,7 @@ const PDFAssetPage = () => {
         </FormGroup>
         <FormGroup>
           <SubmitButton type="submit" onClick={handleSave}>
-            Save and Publish
+            Save
           </SubmitButton>
           <SubmitButton style={{ marginLeft: "10px" }} onClick={handleCancel}>
             Clear

@@ -54,6 +54,7 @@ const SubGroupItem = styled.li`
     background-color: #d4d6d9;
     color: black;
     font-size: 18px;
+    font-weight: bold
   }
 `;
 
@@ -127,7 +128,7 @@ const UploadPDFDialog = ({ onClose }) => {
         <SubGroup>
           <SubGroupTitle>Copilot (All)</SubGroupTitle>
           <SubGroupList>
-            <SubGroupItem>PDF</SubGroupItem>
+            <SubGroupItem style={{backgroundColor: "#d4d6d9", color: 'black', fontWeight: "bold"}}>PDF</SubGroupItem>
             <SubGroupItem>External Link</SubGroupItem>
             <SubGroupItem>Clip</SubGroupItem>
             <SubGroupItem>Photo</SubGroupItem>
@@ -144,12 +145,12 @@ const UploadPDFDialog = ({ onClose }) => {
         <div style={{ display: "flex", flexDirection: "column" }}>
           {pdfData.map((pdf) => (
             <Tile onClick={() => handlePDFSelect(pdf)} key={pdf.id}>
-              <Link
+              {/* <Link
                 to={`/edit/pdf/${pdf.id}`}
                 style={{ textDecoration: "none" }}
-              >
+              > */}
                 <PdfTitle>📄 {pdf.Title} </PdfTitle>
-              </Link>
+              {/* </Link> */}
               <p style={{color: 'grey', fontSize: '12px'}}>Size: {pdf.Size} | Published Date: {pdf.PublicationDate}</p>
             </Tile>
           ))}

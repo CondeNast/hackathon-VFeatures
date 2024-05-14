@@ -12,6 +12,7 @@ export const HeaderWrapper = styled.header`
 export const BrandName = styled.h1`
   font-size: 32px;
   font-weight: bold;
+  font-family: sans-serif;
 `;
 
 

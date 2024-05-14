@@ -11,7 +11,6 @@ const MainContainer = styled.div`
 
 const Section = styled.div`
   margin: 20px;
-  padding: 20px;
   width: 80%;
   max-width: 800px;
   border-radius: 10px;
@@ -57,7 +56,8 @@ const RecircSection = styled(Section)`
 const Sidebar = styled.div`
   margin: 20px;
   padding: 20px;
-  width: 20%;
+  width: 30%;
+  height: fit-content;
   border-radius: 10px;
   background-color: #f0f0f0;
 `;
@@ -102,38 +102,35 @@ const MainPage = ({ isCopilotPage }) => {
   return (
     <MainContainer>
       <AdSection>Ad Section</AdSection>
-      <HeadlineSection style={{fontFamily:"arial"}}>
+      <HeadlineSection style={{ fontFamily: "arial" }}>
         A Beginner Pilates Workout You Can Do Right in Your Living Room
+        <p style={{ fontSize: "24px", fontWeight: "lighter" }}>
+          You don’t need to visit a studio or hop on a fancy Reformer to give
+          Pilates a try.
+        </p>
       </HeadlineSection>
-      <ContentSection style={{fontFamily:"serif"}}>
+      <ContentSection style={{ fontFamily: "serif" }}>
         <article>
           <section>
-            <h1>
-              You don’t need to visit a studio or hop on a fancy Reformer to
-              give Pilates a try.
-            </h1>
             <p>
               With a no-equipment, beginner Pilates workout, you can dabble in
               this popular form of movement right from the comfort of your
               living room—and we have a pretty awesome routine right here that
-              fits that exact bill.
-            </p>
-            <p>
-              Pilates is a great exercise choice for pretty much everyone, Jill
-              Rothenberg, a Boston-based certified Pilates instructor and
-              founder of Movement with Jill, tells SELF. That’s because there’s
-              a strong emphasis on proper form, mind-body connection, and core
-              stability. All this means you’re intentionally moving in ways that
-              feel good for your body, rather than mindlessly busting out a
-              bunch of reps in ways that may not work for your joints or
-              muscles. Plus, Pilates is a pretty stellar way to get stronger,
-              especially if your goal is to help your muscles work for longer
-              without needing to lift a bunch of heavy weights. Another benefit
-              of Pilates: There are lots of ways to “layer” exercises—meaning,
-              make them easier for folks just getting started, or harder for
-              people wanting more of a challenge. This means Pilates is
-              accessible to a wide range of fitness levels—including, yup,
-              beginners.
+              fits that exact bill. Pilates is a great exercise choice for
+              pretty much everyone, Jill Rothenberg, a Boston-based certified
+              Pilates instructor and founder of Movement with Jill, tells SELF.
+              That’s because there’s a strong emphasis on proper form, mind-body
+              connection, and core stability. All this means you’re
+              intentionally moving in ways that feel good for your body, rather
+              than mindlessly busting out a bunch of reps in ways that may not
+              work for your joints or muscles. Plus, Pilates is a pretty stellar
+              way to get stronger, especially if your goal is to help your
+              muscles work for longer without needing to lift a bunch of heavy
+              weights. Another benefit of Pilates: There are lots of ways to
+              “layer” exercises—meaning, make them easier for folks just getting
+              started, or harder for people wanting more of a challenge. This
+              means Pilates is accessible to a wide range of fitness
+              levels—including, yup, beginners.
             </p>
             <div style={{ display: "flex" }}>
               <Sidebar>
@@ -154,10 +151,7 @@ const MainPage = ({ isCopilotPage }) => {
                   </SidebarText>
                 </div>
                 <p style={{ fontSize: "16px", fontFamily: "serif" }}>
-                  The "Beginner Pilates Workout Plan" is a comprehensive guide
-                  designed for individuals new to Pilates exercises. It covers
-                  various aspects of Pilates, including the importance of proper
-                  form, core stability, and mind-body connection.
+                Being active makes you feel better, gives you more energy, improves your mood, and helps you lose weight. Choose activities that are fun, safe, involve repetitive motion that uses the arms and legs, and build endurance.
                 </p>
               </Sidebar>
               <p style={{ flex: "50%" }}>
@@ -175,17 +169,12 @@ const MainPage = ({ isCopilotPage }) => {
                 challenging by curling your head, neck, and shoulders up and
                 doing reps from that position so that your abs take on more
                 work, or by simultaneously extending one leg as the other starts
-                to come back toward your chest, Rothenberg says.
+                to come back toward your chest, Rothenberg says. “The first
+                layer will be really mindful, where you make sure you’re doing
+                the right form, your hips aren’t rocking side to side, your
+                range of motion feels right for you,” she explains.
               </p>
             </div>
-            <p>
-              “The first layer will be really mindful, where you make sure
-              you’re doing the right form, your hips aren’t rocking side to
-              side, your range of motion feels right for you,” she explains.
-              “And then we take it to the next step where you’re still keeping
-              those same foundational cues and moves and sensations, but we’re
-              just making it a little bit more intense.”
-            </p>
             <p>
               With that in mind, Rothenberg designed the five-move Pilates
               workout for SELF below that’s beginner-friendly and includes lots
@@ -212,33 +201,6 @@ const MainPage = ({ isCopilotPage }) => {
               with moves like knee sways (which help mobilize your hips and
               lower back) and pelvic rocks (which fire up your butt and core
               muscles).
-            </p>
-            <p>
-              As you do this circuit, make sure to listen to your body and take
-              breaks when you need to. On the flip side, you can also dial up
-              the intensity by taking fewer breathers (or choosing the more
-              challenging version of an exercise, listed below) if you’re raring
-              for more of a challenge. “You’re the boss of your own body,”
-              Rothenberg says. “No one can really tell you how you’re feeling,
-              so really just honor what feels right to you.”
-            </p>
-            <p>
-              Ready to dip your toe into all that the modality has to offer?
-              Here’s the five-move beginner Pilates workout that can help ease
-              you into the practice. Bacon ipsum dolor amet filet mignon
-              pastrami capicola short loin bresaola. T-bone jowl ham turducken
-              beef. Meatloaf pancetta ham hock burgdoggen, tri-tip short ribs
-              turkey chislic drumstick cupim leberkas capicola fatback strip
-              steak chuck. Chislic ribeye bresaola cow, porchetta jowl fatback
-              cupim. Prosciutto tongue ribeye biltong beef meatball pancetta
-              frankfurter leberkas bresaola. Bacon ipsum dolor amet filet mignon
-              pastrami capicola short loin bresaola. T-bone jowl ham turducken
-              beef. Meatloaf pancetta ham hock burgdoggen, tri-tip short ribs
-              turkey chislic drumstick cupim leberkas capicola fatback strip
-              steak chuck. Chislic ribeye bresaola cow, porchetta jowl fatback
-              cupim. Prosciutto tongue ribeye biltong beef meatball pancetta
-              frankfurter leberkas bresaola. Bacon ipsum dolor amet filet mignon
-              pastrami capicola short loin bresaola.
             </p>
           </section>
         </article>

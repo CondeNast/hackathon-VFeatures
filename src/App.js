@@ -18,7 +18,7 @@ const pages = [
     displayName: 'Create Content Page'
   },
   {
-    pageLink: '/allure/preview/:type/',
+    pageLink: '/self/preview/:type/',
     view: <MainPage isCopilotPage={false} />,
     displayName: 'Main Page'
   },

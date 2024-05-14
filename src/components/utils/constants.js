@@ -3,17 +3,17 @@ export const contentTypes = ['Article', 'Gallery', 'Recipe', 'Review', 'InfoPage
 export const PDFJsonObject = [
     {
       "id": 1,
-      "Title": "Introduction to Machine Learning",
+      "Title": "SELF - Fitness when 20s",
       "Description": "A comprehensive guide to understanding the basics of machine learning algorithms and techniques.",
       "Author": "John Smith",
-      "Tags": ["Machine Learning", "Data Science", "Artificial Intelligence"],
-      "Category": "Educational Material",
-      "PublicationDate": "2022-04-15",
+      "Tags": ["fitness", "body exercise"],
+      "Category": "Health",
+      "PublicationDate": "2023-04-15",
       "Language": "English",
-      "Size": "6.5MB",
-      "fileName": "Introduction_to_Machine_Learning.pdf",
+      "Size": "6.7MB",
+      "fileName": "self-fitness-when-20s.pdf",
       "Comments": "This PDF provides a clear explanation of fundamental machine learning concepts.",
-      "Summary": "'Introduction to Machine Learning' provides an entry point into the field of machine learning, offering an overview of its core concepts, techniques, and applications. The summary covers fundamental topics such as supervised and unsupervised learning, classification and regression algorithms, and model evaluation. Additionally, it delves into the importance of data preprocessing, feature engineering, and model selection in the machine learning pipeline. Through real-world examples and case studies, the introduction highlights how machine learning algorithms are used in various domains including healthcare, finance, and autonomous vehicles. Overall, 'Introduction to Machine Learning' serves as a foundational resource for beginners seeking to understand the principles and practical implications of this rapidly evolving field."
+      "Summary": 'The "Beginner Pilates Workout Plan" is a comprehensive guide designed for individuals new to Pilates exercises.'
     },
     {
       "id": 2,

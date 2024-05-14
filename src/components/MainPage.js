@@ -82,7 +82,7 @@ const SidebarDownloadButton = styled.button`
   }
 `;
 
-const MainPage = ({ isCopilotPage }) => {
+const MainPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -172,7 +172,10 @@ const MainPage = ({ isCopilotPage }) => {
                 to come back toward your chest, Rothenberg says. “The first
                 layer will be really mindful, where you make sure you’re doing
                 the right form, your hips aren’t rocking side to side, your
-                range of motion feels right for you,” she explains.
+                range of motion feels right for you,” she explains. Because this routine is designed as a gentle beginner sequence,
+              you don’t need to do a dedicated warm-up beforehand. Because this routine is designed as a gentle beginner sequence,
+              you don’t need to do a dedicated warm-up beforehand. Because this routine is designed as a gentle beginner sequence,
+              you don’t need to do a dedicated warm-up beforehand. 
               </p>
             </div>
             <p>

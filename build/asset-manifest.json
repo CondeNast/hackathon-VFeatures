@@ -1,19 +1,10 @@
 {
   "files": {
-<<<<<<< Updated upstream
-    "main.js": "/Condenast/hackathon-VFeatures/static/js/main.4c39c1ae.js",
-    "index.html": "/Condenast/hackathon-VFeatures/index.html",
-    "main.4c39c1ae.js.map": "/Condenast/hackathon-VFeatures/static/js/main.4c39c1ae.js.map"
-  },
-  "entrypoints": [
-    "static/js/main.4c39c1ae.js"
-=======
-    "main.js": "/hackathon-VFeatures/static/js/main.0a33f9d7.js",
+    "main.js": "/hackathon-VFeatures/static/js/main.dd78ad5b.js",
     "index.html": "/hackathon-VFeatures/index.html",
-    "main.0a33f9d7.js.map": "/hackathon-VFeatures/static/js/main.0a33f9d7.js.map"
+    "main.dd78ad5b.js.map": "/hackathon-VFeatures/static/js/main.dd78ad5b.js.map"
   },
   "entrypoints": [
-    "static/js/main.0a33f9d7.js"
->>>>>>> Stashed changes
+    "static/js/main.dd78ad5b.js"
   ]
 }

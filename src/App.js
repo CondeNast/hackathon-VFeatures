@@ -16,8 +16,12 @@ const appRouter = createBrowserRouter([
         element: <CreateContentType  isCopilotPage={true}/>,
       },
       {
-        path: "/Condenast/hackathon-VFeatures/allure/:type",
+        path: "/Condenast/hackathon-VFeatures/allure/preview/:type",
         element: <MainPage  isCopilotPage={false} />,
+      },
+      {
+        path: "/Condenast/hackathon-VFeatures/edit/pdf",
+        element: <PDFAssetPage />
       },
       {
         path: "/Condenast/hackathon-VFeatures/edit/pdf/:id",

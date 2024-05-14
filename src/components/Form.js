@@ -113,7 +113,7 @@ const Form = ({ contentType }) => {
         </FormGroup>
         <FormGroup>
           <SubmitButton type="submit">Save and Publish</SubmitButton>
-          <Link to={`/Condenast/hackathon-VFeatures/allure/${contentType}`} target="_blank">
+          <Link to={`/Condenast/hackathon-VFeatures/allure/preview/${contentType}`} target="_blank">
             <ViewLive type="button">Preview</ViewLive>
           </Link>
         </FormGroup>

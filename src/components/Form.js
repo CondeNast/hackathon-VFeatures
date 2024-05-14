@@ -16,33 +16,18 @@ import { useSelector } from "react-redux";
 import { toTitleCase } from "./utils/constants";
 
 const Form = ({ contentType }) => {
-  const [headline, setHeadline] = useState("This is headline");
-  const [dek, setDek] = useState("This is dek");
-  const [body, setBody] = useState(`
-          Ligula ullamcorper malesuada proin libero. Sed velit dignissim sodales
-          ut eu sem. Viverra adipiscing at in tellus. Quisque non tellus orci ac
-          auctor. Eget mi proin sed libero enim sed faucibus. Cras pulvinar
-          mattis nunc sed. Facilisis mauris sit amet massa vitae tortor
-          condimentum lacinia. Aliquet nibh praesent tristique magna sit amet.
-          Curabitur vitae nunc sed velit dignissim sodales ut. Mauris ultrices
-          eros in cursus turpis massa tincidunt. Mattis pellentesque id nibh
-          tortor id aliquet lectus. Nunc mi ipsum faucibus vitae aliquet nec
-          ullamcorper. Risus nec feugiat in fermentum posuere urna. Senectus et
-          netus et malesuada. Sed nisi lacus sed viverra tellus. Suscipit tellus
-          mauris a diam maecenas sed enim ut. Id neque aliquam vestibulum morbi
-          blandit cursus risus at. Metus vulputate eu scelerisque felis. Elit ut
-          aliquam purus sit amet luctus venenatis lectus. Bibendum ut tristique
-          et egestas quis. Vitae justo eget magna fermentum. Euismod quis
-          viverra nibh cras pulvinar mattis nunc sed. Diam donec adipiscing
-          tristique risus nec feugiat in fermentum. Turpis egestas sed tempus
-          urna. Dictum fusce ut placerat orci nulla. Tincidunt dui ut ornare
-          lectus sit amet est placerat. Porttitor leo a diam sollicitudin tempor
-          id eu nisl. Nec dui nunc mattis enim ut tellus elementum sagittis
-          vitae.`);
-  const [publishUrl, setPublishUrl] = useState(
-    "http://localhost:8000/allure/article"
+  const [headline, setHeadline] = useState(
+    "A Beginner Pilates Workout You Can Do Right in Your Living Room"
   );
-  // const [pdfFile, setPdfFile] = useState(null);
+  const [dek, setDek] = useState(
+    "You don’t need to visit a studio or hop on a fancy Reformer to give Pilates a try."
+  );
+  const [body, setBody] = useState(
+    "With a no-equipment, beginner Pilates workout, you can dabble in this popular form of movement right from the comfort of your living room—and we have a pretty awesome routine right here that fits that exact bill. Pilates is a great exercise choice for pretty much everyone, Jill Rothenberg, a Boston-based certified Pilates instructor and founder of Movement with Jill, tells SELF. That’s because there’s a strong emphasis on proper form, mind-body connection, and core stability. All this means you’re intentionally moving in ways that feel good for your body, rather than mindlessly busting out a bunch of reps in ways that may not work for your joints or muscles. Plus, Pilates is a pretty stellar way to get stronger, especially if your goal is to help your muscles work for longer without needing to lift a bunch of heavy weights. Another benefit of Pilates: There are lots of ways to “layer” exercises—meaning, make them easier for folks just getting started, or harder for people wanting more of a challenge. This means Pilates is accessible to a wide range of fitness levels—including, yup, beginners."
+  );
+  const [publishUrl, setPublishUrl] = useState(
+    "https://www.self.com/story/fitness-in-20s"
+  );
   const [showDialog, setShowDialog] = useState(false);
   const selectedPDF = useSelector((state) => state.pdf.pdfsDoc);
 
@@ -58,7 +43,7 @@ const Form = ({ contentType }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Logic to save and publish the article
-    alert("Article Saved and Published!");
+    alert("Article Published Successfully!");
   };
 
   const pdfSelected = selectedPDF ? selectedPDF : null;
@@ -92,13 +77,14 @@ const Form = ({ contentType }) => {
           <TextArea
             id="body"
             value={body}
+            style={{ fontFamily: "serif", fontSize: "18px", padding: "12px" }}
             onChange={(e) => setBody(e.target.value)}
             required
           ></TextArea>
         </FormGroup>
         <FormGroup>
           <UploadAsset type="button" onClick={handlePdfUpload}>
-              Insert Asset
+            Insert Asset
           </UploadAsset>
           {pdfSelected && (
             <span
@@ -126,12 +112,9 @@ const Form = ({ contentType }) => {
           />
         </FormGroup>
         <FormGroup>
-          <SubmitButton type="submit">Save and Publish</SubmitButton>
-          <Link
-            to={`/allure/preview/${contentType}`}
-            target="_blank"
-          >
-            <ViewLive type="button">Preview</ViewLive>
+          <SubmitButton type="submit">Publish</SubmitButton>
+          <Link to={`/self/preview/${contentType}`} target="_blank">
+            <ViewLive type="button">Save & Preview</ViewLive>
           </Link>
         </FormGroup>
         {showDialog && <UploadPDFDialog onClose={handleCloseDialog} />}

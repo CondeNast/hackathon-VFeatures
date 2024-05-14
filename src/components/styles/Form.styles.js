@@ -51,6 +51,20 @@ export const SubmitButton = styled.button`
   }
 `;
 
+export const CreateSummaryButton = styled.button`
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
 export const ViewLive = styled.button`
   background-color: #08995a;
   color: white;

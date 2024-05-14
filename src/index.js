@@ -6,7 +6,7 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Suspense fallback={<div />}>
-    <BrowserRouter basename="/hackathon-VFeatures">
+    <BrowserRouter>
       <StrictMode>
         <App />
       </StrictMode>

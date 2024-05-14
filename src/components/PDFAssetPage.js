@@ -70,11 +70,7 @@ const PDFAssetPage = () => {
     e.preventDefault();
     setFileKey((prevKey) => prevKey + 1);
     setSummarizedText("");
-    setDek("");
-    setTitle("");
-    setAuthor("");
     setFileName("");
-    setTags("");
   };
 
   const handleSummaryChange = (e) => {

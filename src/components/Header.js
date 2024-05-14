@@ -23,9 +23,8 @@ const Header = () => {
       </div>
       {true && (
         <div>
-          <Link to={`/Condenast/hackathon-VFeatures/edit/pdf`} 
-          >
-            <UploadButton>Upload PDF ⬆️ </UploadButton>
+          <Link to={`/edit/pdf`}>
+            <UploadButton onClick={toggleDropdown}>Upload PDF ⬆️ </UploadButton>
           </Link>
           <CreateButton onClick={toggleDropdown}>Create</CreateButton>
           {isDropdownOpen && (
@@ -34,7 +33,7 @@ const Header = () => {
                 {contentTypes.map((contentType) => (
                   <li key={contentType} style={{ margin: "5px 0" }}>
                     <Link
-                      to={`/Condenast/hackathon-VFeatures/create/${contentType.toLowerCase()}`}
+                      to={`/create/${contentType.toLowerCase()}`}
                       style={{
                         textDecoration: "none",
                         color: "black",

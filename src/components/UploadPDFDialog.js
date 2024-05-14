@@ -145,7 +145,7 @@ const UploadPDFDialog = ({ onClose }) => {
           {pdfData.map((pdf) => (
             <Tile onClick={() => handlePDFSelect(pdf)} key={pdf.id}>
               <Link
-                to={`/Condenast/hackathon-VFeatures/edit/pdf/${pdf.id}`}
+                to={`/edit/pdf/${pdf.id}`}
                 style={{ textDecoration: "none" }}
               >
                 <PdfTitle>📄 {pdf.Title} </PdfTitle>

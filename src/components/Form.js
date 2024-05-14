@@ -110,7 +110,7 @@ const Form = ({ contentType }) => {
               }}
             >
               <Link
-                to={`/Condenast/hackathon-VFeatures/edit/pdf/${pdfSelected.id}`}
+                to={`/edit/pdf/${pdfSelected.id}`}
               >{`${pdfSelected.fileName} ✅`}</Link>
             </span>
           )}
@@ -128,7 +128,7 @@ const Form = ({ contentType }) => {
         <FormGroup>
           <SubmitButton type="submit">Save and Publish</SubmitButton>
           <Link
-            to={`/Condenast/hackathon-VFeatures/allure/preview/${contentType}`}
+            to={`/allure/preview/${contentType}`}
             target="_blank"
           >
             <ViewLive type="button">Preview</ViewLive>

@@ -49,7 +49,6 @@ function App() {
             />
           );
         })}
-        <Route path="*" element={<Homepage isCopilotPage={true}/>} />
       </Routes>
     </Provider>
   );

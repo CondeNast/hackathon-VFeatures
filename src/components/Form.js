@@ -13,6 +13,7 @@ import {
 import { Link } from "react-router-dom";
 import UploadPDFDialog from "./UploadPDFDialog";
 import { useSelector } from "react-redux";
+import { toTitleCase } from "./utils/constants";
 
 const Form = ({ contentType }) => {
   const [headline, setHeadline] = useState("This is headline");
@@ -64,7 +65,7 @@ const Form = ({ contentType }) => {
 
   return (
     <Container>
-      <Title>{contentType && contentType.toUpperCase()}</Title>
+      <Title>{contentType && `Create ${toTitleCase(contentType)}`}</Title>
       <form onSubmit={handleSubmit}>
         <FormGroup>
           <Label htmlFor="headline">Headline:</Label>
@@ -97,7 +98,7 @@ const Form = ({ contentType }) => {
         </FormGroup>
         <FormGroup>
           <UploadAsset type="button" onClick={handlePdfUpload}>
-            Upload an Asset
+              Insert Asset
           </UploadAsset>
           {pdfSelected && (
             <span
@@ -110,7 +111,6 @@ const Form = ({ contentType }) => {
             >
               <Link
                 to={`/edit/pdf/${pdfSelected.id}`}
-                target="_blank"
               >{`${pdfSelected.fileName} ✅`}</Link>
             </span>
           )}

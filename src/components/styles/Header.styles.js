@@ -14,12 +14,6 @@ export const BrandName = styled.h1`
   font-weight: bold;
 `;
 
-// export const SearchInput = styled.input`
-//   padding: 5px;
-//   border: none;
-//   border-radius: 5px;
-//   margin-right: 10px;
-// `;
 
 export const CreateButton = styled.button`
   padding: 12px;
@@ -37,9 +31,9 @@ export const CreateButton = styled.button`
 
 export const UploadButton = styled.button`
   padding: 8px 12px;
-  background-color: #e65050;
+  background-color: transparent;
+  border: 2px solid #e65050;
   color: white;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-right: 18px;
@@ -47,7 +41,8 @@ export const UploadButton = styled.button`
   font-weight: bold;
 
   &:hover {
-    opacity: 0.8;
+    background-color: #e65050;
+    color: white;
   }
 `;
 

@@ -90,7 +90,7 @@ const PDFAssetPage = () => {
       const formData = new FormData();
       formData.append("file", selectedFile);
       const response = await axios.post(
-        "http://16.170.236.3:8080/summarize",
+        "https://16.170.236.3:8080/summarize",
         formData,
         {
           headers: {

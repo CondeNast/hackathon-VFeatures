@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 import {
   Container,
   FormGroup,
@@ -47,7 +47,7 @@ const LoadingSpinner = () => {
 };
 
 const PDFAssetPage = () => {
-  // const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
   const [summarizedText, setSummarizedText] = useState("");
   const [fileName, setFileName] = useState("");
   const [fileKey, setFileKey] = useState(0);
@@ -58,7 +58,12 @@ const PDFAssetPage = () => {
   };
 
   const handleFileChange = (event) => {
-    // setSelectedFile(event.target.files[0]);
+    setSelectedFile(event.target.files[0]);
+    const file = event.target.files[0];
+    if (file) {
+      const fileName = file.name.replace(/\s+/g, "-");
+      setFileName(fileName);
+    }
   };
 
   const handleSave = (e) => {
@@ -73,35 +78,32 @@ const PDFAssetPage = () => {
   };
 
   const handleSummaryChange = (e) => {
-    setSummarizedText(
-      'The "Beginner Pilates Workout Plan" is a comprehensive guide designed for individuals new to Pilates exercises.'
-    );
+    setSummarizedText(e.target.value);
   };
 
   const handleSummarize = async (e) => {
     e.preventDefault();
     try {
       setLoading(true);
-      setTimeout(() => {
-        const formattedText =
-          'The "Beginner Pilates Workout Plan" is a comprehensive guide designed for individuals new to Pilates exercises.';
-        setSummarizedText(formattedText);
-        setLoading(false);
-      }, 3000);
-      //   const formData = new FormData();
-      //   formData.append("file", selectedFile);
-      //   const response = await axios.post(
-      //     "http://127.0.0.1:5000/summarize",
-      //     formData,
-      //     {
-      //       headers: {
-      //         "Content-Type": "multipart/form-data",
-      //       },
-      //     }
-      //   );
-      //   const formattedText = response.data.replace(/\. /g, ".\n\n").replace(/\s+/g, " ");
+      const formData = new FormData();
+      formData.append("file", selectedFile);
+      const response = await axios.post(
+        "http://16.170.236.3:8080/summarize",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      const formattedText = response.data
+        .replace(/\. /g, ".\n\n")
+        .replace(/\s+/g, " ");
+      console.log("formattedText", formattedText);
+      setSummarizedText(formattedText);
     } catch (error) {
       console.error("Error summarizing text:", error);
+    } finally {
       setLoading(false);
     }
   };
@@ -131,7 +133,7 @@ const PDFAssetPage = () => {
                 placeholder="PDF Summary here..."
                 style={{
                   width: "800px",
-                  height: "200px",
+                  height: "150px",
                   fontSize: "18px",
                   fontFamily: "serif",
                   padding: "12px",

@@ -19,7 +19,9 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <div>
+      <Link to={`/`}>
         <BrandName><img style={{width: "32px", height: "32px", marginRight: "16px"}} src="https://emoji.slack-edge.com/T5Y8VC3HU/copilot/b9f707d326122736.png" alt="brand-name"/>SELF</BrandName>
+      </Link>
       </div>
       {true && (
         <div>

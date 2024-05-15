@@ -131,7 +131,7 @@ const PDFAssetPage = () => {
                 id="summary"
                 placeholder="PDF Summary here..."
                 style={{
-                  width: "800px",
+                  width: "70%",
                   height: "150px",
                   fontSize: "18px",
                   fontFamily: "serif",

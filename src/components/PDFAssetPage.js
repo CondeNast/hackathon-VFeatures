@@ -99,7 +99,6 @@ const PDFAssetPage = () => {
       const formattedText = response.data
         .replace(/\. /g, ".\n\n")
         .replace(/\s+/g, " ");
-      console.log("formattedText", formattedText);
       setSummarizedText(formattedText);
     } catch (error) {
       console.error("Error summarizing text:", error);
